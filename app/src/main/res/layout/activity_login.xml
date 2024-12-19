@@ -1,0 +1,119 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".MainActivity">
+
+    <!-- Contenedor principal con fondo redondeado -->
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="24dp"
+        android:elevation="8dp">
+
+        <!-- Pestañas de Login y Registrarse -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Botón de Login -->
+            <TextView
+                android:id="@+id/tab_login"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingVertical="8dp"
+                android:text="Login"
+                android:textColor="@android:color/white"
+                android:background="@drawable/tab_selected_background"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Botón de Registrarse -->
+            <TextView
+                android:id="@+id/tab_register"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingVertical="8dp"
+                android:text="Registrarse"
+                android:textColor="@android:color/black"
+                android:background="@drawable/tab_unselected_background"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <!-- Texto de bienvenida -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Bienvenido Antojo Local"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+        <!-- Campo de Gmail -->
+        <EditText
+            android:id="@+id/edt_mail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Gmail"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/dark_gray" />
+
+        <!-- Campo de Contraseña -->
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Contraseña"
+            android:padding="10dp"
+            android:layout_marginTop="16dp"
+            android:inputType="textPassword"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/dark_gray"/>
+
+        <!-- Botón de Login -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:text="LOGIN"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/naranja"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Texto de Olvidó su Contraseña -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="¿Olvidó su Contraseña?"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
