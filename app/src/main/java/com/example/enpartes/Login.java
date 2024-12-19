@@ -1,6 +1,10 @@
 package com.example.enpartes;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +23,24 @@ public class Login extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        TextView reg= findViewById(R.id.tab_register);
+        reg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Login.this, register.class);
+                startActivity(intent);
+            }
+        });
+
+        Button log=findViewById(R.id.btn_log);
+        log.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Login.this,Menu.class);
+                startActivity(intent);
+            }
         });
     }
 }

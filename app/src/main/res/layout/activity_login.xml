@@ -96,6 +96,7 @@
 
         <!-- Botón de Login -->
         <Button
+            android:id="@+id/btn_log"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="16dp"

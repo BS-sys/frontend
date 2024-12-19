@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_back"
+    tools:context=".Menu">
+
+    <!-- Título del menú -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="34sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp" />
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona una opción para comenzar"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botones de opciones -->
+    <LinearLayout
+        android:id="@+id/menuOptions"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/subtitle"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="24dp">
+
+        <!-- Botón 1 -->
+        <Button
+            android:id="@+id/btnOption1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Opción 1"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="20dp" />
+
+        <!-- Botón 2 -->
+        <Button
+            android:id="@+id/btnOption2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Opción 2"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="16dp" />
+
+        <!-- Botón 3 -->
+        <Button
+            android:id="@+id/btnOption3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Opción 3"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+    <!-- Menú inferior flotante -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_nav_background"
+        app:menu="@menu/bottom_menu"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
